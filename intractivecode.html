@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My first interactive web page
+        </title>
+    </head>
+    <style>
+        .content{
+            padding: 5px;
+            background-color: aquamarine;
+            width: 80%;
+            margin-left: 10%;
+            border-radius: 30px;
+            text-align: center;
+        }
+        .newcontent{
+            padding: 5px;
+            background-color: aliceblue;
+            width: 80%;
+            margin-left: 10%;
+            border-radius: 10px;
+        }
+        #changecolourButton{
+            padding: 10px;
+            font-size: 16px;
+            background-color: aqua;
+            color: white;
+            border-radius: 15px;
+        }
+    </style>
+<body>
+    <div class="content">
+        <h2>welcome to my intrative web page</h2>
+    </div>
+    <br>
+    <div class="newcontent">
+        <p>
+            this is a sample example of intaractive web page</p>
+        <p>
+            i have used a very simple website to show.
+        </p>
+    </div>
+    <div>
+        <button id="changecolourButton">change background colour</button>
+    </div>
+    <script>
+        document.getElementById("changecolourButton").addEventListener("click",function(){
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        })
+    </script>
+</body>
+</html>
